@@ -21,6 +21,10 @@ unagi/
 │   ├── research/SKILL.md        # /research — spawn parallel investigation subagents
 │   ├── spec/SKILL.md            # /spec — create structured spec (WHAT + WHY)
 │   ├── plan/SKILL.md            # /plan — create technical plan (HOW)
+│   ├── html/SKILL.md            # /html — render spec/plan/research as self-contained HTML
+│   ├── diagram/SKILL.md         # /diagram — SVG architecture + flow diagrams
+│   ├── slides/SKILL.md          # /slides — keyboard-navigable slide deck from spec or plan
+│   ├── pr/SKILL.md              # /pr writeup|review — PR narrative or annotated review HTML
 │   ├── tasks/SKILL.md           # /tasks — generate PRD.md from spec + plan
 │   ├── afk/SKILL.md             # /afk — AFK coding mode (TDD loop)
 │   ├── ralph/SKILL.md           # /ralph — quick PRD creation interview
@@ -30,7 +34,11 @@ unagi/
 │   └── <YYYYMMDD>-<name>/
 │       ├── research.md          # Research findings from /research
 │       ├── spec.md              # The specification (WHAT + WHY)
-│       └── plan.md              # The technical plan (HOW)
+│       ├── spec.html            # HTML render from /html (optional)
+│       ├── plan.md              # The technical plan (HOW)
+│       ├── plan.html            # HTML render from /html (optional)
+│       ├── diagram.html         # Architecture/flow diagram from /diagram (optional)
+│       └── slides.html          # Slide deck from /slides (optional)
 │
 ├── scripts/
 │   ├── ralph.sh                 # AFK loop (N iterations, configurable agent)

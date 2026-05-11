@@ -122,6 +122,7 @@ Tasks marked [PARALLEL] can run concurrently with others at the same level.
 /research <topic>   ← optional: spawn parallel agents first
 /spec <description> ← define WHAT and WHY
 /plan <spec-path>   ← define HOW (you are here)
+/html <specs/dir/>  ← render spec + plan as self-contained HTML
 /tasks <spec-path>  ← generate PRD.md for the ralph loop
 ./scripts/ralph.sh  ← execute tasks autonomously
 ```
