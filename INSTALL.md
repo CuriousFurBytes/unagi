@@ -68,12 +68,16 @@ Copy skill files to your Claude Code config:
 ```bash
 CLAUDE_DIR="${CLAUDE_CONFIG_DIR:-$HOME/.claude}"
 mkdir -p "$CLAUDE_DIR/skills/unagi"
-cp skills/afk/SKILL.md      "$CLAUDE_DIR/skills/unagi/afk.md"
-cp skills/ralph/SKILL.md    "$CLAUDE_DIR/skills/unagi/ralph.md"
+cp skills/research/SKILL.md   "$CLAUDE_DIR/skills/unagi/research.md"
+cp skills/spec/SKILL.md       "$CLAUDE_DIR/skills/unagi/spec.md"
+cp skills/plan/SKILL.md       "$CLAUDE_DIR/skills/unagi/plan.md"
+cp skills/tasks/SKILL.md      "$CLAUDE_DIR/skills/unagi/tasks.md"
+cp skills/afk/SKILL.md        "$CLAUDE_DIR/skills/unagi/afk.md"
+cp skills/ralph/SKILL.md      "$CLAUDE_DIR/skills/unagi/ralph.md"
 cp skills/ralph-loop/SKILL.md "$CLAUDE_DIR/skills/unagi/ralph-loop.md"
 ```
 
-Then use `/afk`, `/ralph`, and `/ralph-loop` in Claude Code.
+Then use `/research`, `/spec`, `/plan`, `/tasks`, `/afk`, `/ralph`, and `/ralph-loop` in Claude Code.
 
 ---
 

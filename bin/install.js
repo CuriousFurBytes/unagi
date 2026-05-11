@@ -117,7 +117,23 @@ function readSkill(name) {
 }
 
 function ruleFileContent() {
-  return `# unagi — AFK coding with ralph loop
+  return `# unagi — spec-driven AFK coding with ralph loop
+
+${readSkill('research')}
+
+---
+
+${readSkill('spec')}
+
+---
+
+${readSkill('plan')}
+
+---
+
+${readSkill('tasks')}
+
+---
 
 ${readSkill('afk')}
 
@@ -126,14 +142,18 @@ ${readSkill('afk')}
 ## Quick start
 
 \`\`\`bash
-# Create a PRD interactively
-/ralph
+# Spec-driven workflow
+/research "what to build"  # optional: parallel investigation
+/spec "feature description" # create spec (WHAT + WHY)
+/plan specs/.../spec.md     # technical plan (HOW)
+/tasks specs/.../spec.md    # generate PRD.md
 
-# Single HITL iteration (watch what happens)
-./scripts/ralph-once.sh
+# Or quick path (skip spec/plan)
+/ralph  # interview-style PRD creation
 
-# Full AFK loop
-./scripts/ralph.sh [MAX_ITER] [PRD_FILE]
+# Execute
+./scripts/ralph-once.sh     # watch one iteration
+./scripts/ralph.sh [N]      # go AFK
 \`\`\`
 `;
 }
@@ -267,7 +287,7 @@ function installProvider(provider) {
   switch (provider.mech) {
     case 'claude-skills': {
       const skillsDir = path.join(CONFIG_DIR, 'skills', 'unagi');
-      for (const name of ['afk', 'ralph', 'ralph-loop']) {
+      for (const name of ['research', 'spec', 'plan', 'tasks', 'afk', 'ralph', 'ralph-loop']) {
         copyFile(`skills/${name}/SKILL.md`, `${skillsDir}/${name}.md`, `(${name} skill)`);
       }
       const binDest = path.join(HOME, '.local', 'bin');
@@ -417,9 +437,13 @@ for (const p of targets) {
 
 console.log(`\n${c.green('Done!')} ${targets.length} agent(s) ${UNINSTALL ? 'uninstalled' : 'installed'}.`);
 if (!UNINSTALL) {
-  console.log(`\nNext steps:`);
-  console.log(`  1. Create a PRD:     /ralph  (in Claude Code)`);
-  console.log(`  2. Test one loop:    ./scripts/ralph-once.sh`);
-  console.log(`  3. Go AFK:           ./scripts/ralph.sh`);
+  console.log(`\nNext steps (spec-driven):`);
+  console.log(`  1. Research:   /research "what to build"     (optional)`);
+  console.log(`  2. Spec:       /spec "feature description"`);
+  console.log(`  3. Plan:       /plan specs/.../spec.md`);
+  console.log(`  4. Tasks:      /tasks specs/.../spec.md      (generates PRD.md)`);
+  console.log(`  5. Test loop:  ./scripts/ralph-once.sh`);
+  console.log(`  6. Go AFK:     ./scripts/ralph.sh`);
+  console.log(`\n  Quick path (skip spec/plan): /ralph → ./scripts/ralph.sh`);
 }
 console.log('');

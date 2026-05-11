@@ -18,15 +18,27 @@ unagi/
 ├── AGENTS.md / GEMINI.md        # Auto-discovery (file refs only — @./skills/*/SKILL.md)
 │
 ├── skills/                      # Single source of truth for all skills
+│   ├── research/SKILL.md        # /research — spawn parallel investigation subagents
+│   ├── spec/SKILL.md            # /spec — create structured spec (WHAT + WHY)
+│   ├── plan/SKILL.md            # /plan — create technical plan (HOW)
+│   ├── tasks/SKILL.md           # /tasks — generate PRD.md from spec + plan
 │   ├── afk/SKILL.md             # /afk — AFK coding mode (TDD loop)
-│   ├── ralph/SKILL.md           # /ralph — PRD creation interview
+│   ├── ralph/SKILL.md           # /ralph — quick PRD creation interview
 │   └── ralph-loop/SKILL.md      # /ralph-loop — status + runner
+│
+├── specs/                       # Generated spec artifacts (gitignored content, tracked via .gitkeep)
+│   └── <YYYYMMDD>-<name>/
+│       ├── research.md          # Research findings from /research
+│       ├── spec.md              # The specification (WHAT + WHY)
+│       └── plan.md              # The technical plan (HOW)
 │
 ├── scripts/
 │   ├── ralph.sh                 # AFK loop (N iterations, configurable agent)
 │   └── ralph-once.sh            # Single HITL iteration
 │
 ├── templates/
+│   ├── spec.md                  # Spec template (WHAT + WHY)
+│   ├── plan.md                  # Plan template (HOW)
 │   ├── PRD.md                   # PRD template with sizing guide
 │   ├── progress.md              # Progress tracker template
 │   └── AGENTS.md                # Project conventions template
