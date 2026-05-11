@@ -2,6 +2,9 @@
 @./skills/spec/SKILL.md
 @./skills/plan/SKILL.md
 @./skills/html/SKILL.md
+@./skills/diagram/SKILL.md
+@./skills/slides/SKILL.md
+@./skills/pr/SKILL.md
 @./skills/tasks/SKILL.md
 @./skills/afk/SKILL.md
 @./skills/ralph/SKILL.md
