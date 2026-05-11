@@ -1,0 +1,14 @@
+{
+  "name": "unagi",
+  "version": "1.0.0",
+  "description": "AFK coding skills with the ralph loop — autonomous TDD-driven implementation across 10+ AI coding agents.",
+  "author": "CuriousFurBytes",
+  "license": "AGPL-3.0",
+  "repository": "https://github.com/curiousfurbytes/unagi",
+  "engines": { "node": ">=18" },
+  "bin": { "unagi-install": "./bin/install.js" },
+  "files": ["bin", "skills", "scripts", "templates", "src", ".claude-plugin", ".codex", "*.md", "*.json", "*.sh", "*.ps1"],
+  "scripts": {
+    "test": "bash tests/ralph.test.sh"
+  }
+}
