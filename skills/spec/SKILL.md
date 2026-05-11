@@ -122,6 +122,7 @@ Use the feature description as the seed. Then:
 /research <topic>   ← optional: spawn parallel agents first
 /spec <description> ← create the spec (you are here)
 /plan <spec-path>   ← translate spec into technical plan
+/html <specs/dir/>  ← render spec + plan as self-contained HTML
 /tasks <spec-path>  ← generate PRD.md for the ralph loop
 ./scripts/ralph.sh  ← execute tasks autonomously
 ```
