@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'UNAGI AFK MODE. On each task: 1) Read PRD.md, find next - [ ] item. 2) RED: write failing test first. 3) GREEN: implement minimum code to pass. 4) Refactor. 5) Commit. 6) Update progress.md. 7) Mark - [x] in PRD.md. Rules: never mark done if tests fail; one task per invocation; if blocked write BLOCKED to progress.md.'",
+            "timeout": 5,
+            "statusMessage": "Loading unagi AFK skills"
+          }
+        ]
+      }
+    ]
+  }
+}
